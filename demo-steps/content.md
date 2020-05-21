@@ -2,9 +2,13 @@
 
 # ADG Demo Script #
 
-
+The steps below demonstrate Active Data Guard functionality from an on-premise database to a cloud database in the Oracle Cloud.  Initially the on-premise database is the primary and the cloud database will be the standby.
 
 ## Requirements ##
+
+On premise database and cloud database has been set up
+
+Active Data Guard is configured
 
 Access to putty or equivalent
 
@@ -36,9 +40,9 @@ ssh -i labkey opc@168.138.67.93
 sudo su - oracle
 ```
 
+You can skip this step if you want to use the same test user.  Otherwise you can create your own user.  
 
-
-From on-premise side, create a test user in orclpdb, and grant privileges to the user. You need to check if the pdb is open.
+​	4. From on-premise side, create a test user in orclpdb, and grant privileges to the user. You need to check if the pdb is open.
 
 On premise side:
 
@@ -84,7 +88,7 @@ User altered.
 SQL>exit;
 ```
 
-2. Connect with testuser, create test table or your own table and insert a test record.
+​	5. Connect with testuser, create test table or your own table and insert a test record.
 
 ```
 [oracle@workshop ~]$ sqlplus testuser/testuser@workshop:1521/orclpdb
@@ -113,7 +117,7 @@ Commit complete.
 SQL>  
 ```
 
-3. From cloud side, open the standby database as read only.
+​	6. From cloud side, open the standby database as read only.
 
 ```
 [oracle@dbstby ~]$ sqlplus / as sysdba
@@ -150,7 +154,7 @@ Version 19.5.0.0.0
 [oracle@dbstby ~]$ 
 ```
 
-4. From cloud side, connect as testuser to orclpdb. Check if the test table and record has replicated to the standby.
+​	7. From cloud side, connect as testuser to orclpdb. Check if the test table and record has replicated to the standby.
 
 ```
 [oracle@dbstby ~]$ sqlplus testuser/testuser@dbstby:1521/orclpdb
