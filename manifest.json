@@ -1,0 +1,34 @@
+{
+    "tutorials": [
+        {
+            "title": "Active Data Guard Demo Overview",
+            "description":"Active Data Guard Demo Overview",
+            "publisheddate": "01/15/2020",
+            "filename":"./about-the-workshop/content.md"
+        },
+        {
+            "title": "Lab 0: Access Oracle Cloud Environment",
+            "description":"Access Oracle Cloud Environment",
+            "publisheddate": "03/20/2020",
+            "filename":"./lab000/content.md"
+        },
+        {
+            "title": "Lab 1: Lab 1",
+            "description":"Lab 1",
+            "publisheddate": "03/20/2020",
+            "filename":"./lab100/content.md"
+        },
+        {
+            "title": "Lab 2: Lab 2",
+            "description":"Lab 2",
+            "publisheddate": "03/20/2020",
+            "filename":"./lab200/content.md"
+        },
+        {
+            "title": "Lab 5: Lab 5",
+            "description":"Lab 5",
+            "publisheddate": "03/20/2020",
+            "filename":"./lab500/content.md"
+        }
+    ]
+}
